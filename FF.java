@@ -29,10 +29,10 @@ public class FF {
         int age = sc.nextInt();
             while (age < 1) {
                 sc.nextLine(); 
-                System.out.println("Error, please enter a valid number above 0: ");
+                System.out.println("Invalid Age, try again: ");
                 while (!sc.hasNextInt()) {
                     sc.nextLine(); 
-                    System.out.println("Error, please enter a valid number above 0: ");
+                    System.out.println("Invalid Age, try again: ");
                 }
                 age = sc.nextInt();
             }
@@ -41,10 +41,10 @@ public class FF {
         float weight = sc.nextInt();
             while(weight < 1) {
                 sc.nextLine(); 
-                System.out.println("Error, please enter a valid number above 0: ");
+                System.out.println("Invalid Weight, try again: ");
                 while (!sc.hasNextInt()) {
                     sc.nextLine(); 
-                    System.out.println("Error, please enter a valid number above 0: ");
+                    System.out.println("Invalid weight, try again: ");
                 }
                 weight = sc.nextInt();
             }
@@ -53,10 +53,10 @@ public class FF {
         float height = sc.nextInt();
             while(height < 1) {
                 sc.nextLine(); 
-                System.out.println("Error, please enter a valid number above 0: ");
+                System.out.println("Invalid Height, try again: ");
                 while (!sc.hasNextInt()) {
                     sc.nextLine(); 
-                    System.out.println("Error, please enter a valid number above 0: ");
+                    System.out.println("Invalid Height, try again: ");
                 }
                 height = sc.nextInt();
             }
@@ -66,10 +66,10 @@ public class FF {
         int gender = sc.nextInt();
             while (gender < 1 || gender > 2) {
                 sc.nextLine(); 
-                System.out.println("Error, please choose a number between 1(Male) and 2(Female): ");
+                System.out.println("Invalid Gender, try again: ");
                 while (!sc.hasNextInt()) {
                     sc.nextLine(); 
-                    System.out.println("Error, please choose a number between 1(Male) and 2(Female): ");
+                    System.out.println("Invalid Gender, try again: ");
                 }
                 gender = sc.nextInt();
             }
@@ -79,10 +79,10 @@ public class FF {
         int health = sc.nextInt();
             while (health < 1 || health > 2) {
                 sc.nextLine(); 
-                System.out.println("Error, please choose a number between 1(Yes) and 2(No): ");
+                System.out.println("Invalid Input, try again: ");
                 while (!sc.hasNextInt()) {
                     sc.nextLine(); 
-                    System.out.println("Error, please choose a number between 1(Yes) and 2(No): ");
+                    System.out.println("Invalid Input, try again: ");
                 }
                 health = sc.nextInt();
             }
@@ -122,10 +122,10 @@ public class FF {
         int location = sc.nextInt();
             while (location < 1 || location > 2) {
                 sc.nextLine(); 
-                System.out.println("Error, please choose a number between 1(Gym) and 2(Home): ");
+                System.out.println("Invalid Location, try again: ");
                 while (!sc.hasNextInt()) {
                     sc.nextLine(); 
-                    System.out.println("Error, please choose a number between 1(Gym) and 2(Home): ");
+                    System.out.println("Invalid Location, try again: ");
                 }
                 location = sc.nextInt();
             }
@@ -136,10 +136,10 @@ public class FF {
         int wrktime = sc.nextInt();
             while (wrktime < 1 || wrktime > 3) {
                 sc.nextLine(); 
-                System.out.println("Error, please choose a number between 1(1-2 Days Per week), 2(3-5 Days Per Week) and 3(6-7 Days Per week): ");
+                System.out.println("Invalid Time, try again: ");
                 while (!sc.hasNextInt()) {
                     sc.nextLine(); 
-                    System.out.println("Error, please choose a number between 1(1-2 Days Per week), 2(3-5 Days Per Week) and 3(6-7 Days Per week): ");
+                    System.out.println("Invalid Time, try again: ");
                 }
                 wrktime = sc.nextInt();
             }
@@ -149,10 +149,10 @@ public class FF {
         int exp = sc.nextInt();
             while (exp < 1 || exp > 3) {
                 sc.nextLine(); 
-                System.out.println("Error, please choose a number between 1(Beginner), 2(With Some Experience) and 3(Experienced Lifter): ");
+                System.out.println("Invalid Level, try again:");
                 while (!sc.hasNextInt()) {
                     sc.nextLine(); 
-                    System.out.println("Error, please choose a number between 1(Beginner), 2(With Some Experience) and 3(Experienced Lifter): ");
+                    System.out.println("Invalid Level, try again: ");
                 }
                 exp = sc.nextInt();
             }
@@ -162,10 +162,10 @@ public class FF {
         int mealplan = sc.nextInt();
             while (mealplan < 1 || mealplan > 2) {
                 sc.nextLine(); 
-                System.out.println("Error, please choose a number between 1(Yes) and 2(No): ");
+                System.out.println("Invalid Input, try again: ");
                 while (!sc.hasNextInt()) {
                     sc.nextLine(); 
-                    System.out.println("Error, please choose a number between 1(Yes) and 2(No): ");
+                    System.out.println("Invalid Input, try again: ");
                 }
                 mealplan = sc.nextInt();
             }
