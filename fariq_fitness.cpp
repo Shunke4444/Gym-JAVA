@@ -44,7 +44,7 @@ cout << "                                       /" ;
         cin.clear();
         cin.ignore(10000, '\n');
         cout << "Error, please enter a valid number above 0: ";
-        cin >> weight
+        cin >> weight;
     }
     cout << "Height in Meters: ";
     cin >> height;
