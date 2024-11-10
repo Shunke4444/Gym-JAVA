@@ -48,17 +48,16 @@ public class FF {
                 }
                 weight = sc.nextInt();
             }
-
-        System.out.println("\nHeight in Centimeters: ");
-        float height = sc.nextInt();
+            System.out.println("\nHeight in Centimeters: ");
+            float height = sc.nextFloat();
             while(height < 1) {
                 sc.nextLine(); 
                 System.out.println("Invalid Height, try again: ");
-                while (!sc.hasNextInt()) {
+                while (!sc.hasNextFloat()) {
                     sc.nextLine(); 
                     System.out.println("Invalid Height, try again: ");
                 }
-                height = sc.nextInt();
+                height = sc.nextFloat();
             }
 
         System.out.println("------------------------------------");
@@ -74,9 +73,9 @@ public class FF {
                 gender = sc.nextInt();
             }
 
-        System.out.println("==========================================================");
-        System.out.println("Do you have any injuries or health conditions that affect your ability to exercise? \n1. Yes \n2. No \nInput: ");
-        int health = sc.nextInt();
+            System.out.println("==========================================================");
+            System.out.println("Do you have any injuries or health conditions that affect your ability to exercise? \n1. Yes \n2. No \nInput: ");
+            int health = sc.nextInt();
             while (health < 1 || health > 2) {
                 sc.nextLine(); 
                 System.out.println("Invalid Input, try again: ");
@@ -86,25 +85,70 @@ public class FF {
                 }
                 health = sc.nextInt();
             }
-
+            
             if (health == 1){
+                sc.nextLine(); // Consume the newline character
                 System.out.println("==========================================================");
-                System.out.println("Please consult your doctor first.");
+                System.out.println("Please specify your injury or health condition: ");
+                String injury = sc.nextLine();
                 System.out.println("==========================================================");
-                System.exit(0);
+                System.out.println("Have you consulted a doctor? \n1. Yes \n2. No \nInput: ");
+                int consulted = sc.nextInt();
+                while (consulted < 1 || consulted > 2) {
+                    sc.nextLine(); 
+                    System.out.println("Invalid Input, try again: ");
+                    while (!sc.hasNextInt()) {
+                        sc.nextLine(); 
+                        System.out.println("Invalid Input, try again: ");
+                    }
+                    consulted = sc.nextInt();
+                }
+            
+                if (consulted == 1) {
+                    sc.nextLine(); // Consume the newline character
+                    System.out.println("==========================================================");
+                    System.out.println("Please send a PDF file or image of the doctor's approval.");
+                    String upload = sc.nextLine();
+                    if (upload.equalsIgnoreCase("uploaded")) {
+                        System.out.println("we have confirmed your doctor's approval! Please do still be careful.");
+                    } else {
+                        System.out.println("Invalid input. Please upload the document.");
+                        System.out.println("Please upload the document.");
+                        consulted = sc.nextInt();
+                        while (consulted < 1 || consulted > 2) {
+                            sc.nextLine(); 
+                            System.out.println("Invalid Input, try again: ");
+                            while (!sc.hasNextInt()) {
+                                sc.nextLine(); 
+                                System.out.println("Invalid Input, try again: ");
+                            }
+                            consulted = sc.nextInt();
+                        }
+                    }
+                    System.out.println("==========================================================");
+                } else {
+                    System.out.println("==========================================================");
+                    if (injury.equalsIgnoreCase("asthma")) {
+                        System.out.println("If you have asthma, it is important to consult your doctor before starting any exercise routine.");
+                    } else {
+                        System.out.println("Please consult your doctor first.");
+                    }
+                    System.out.println("==========================================================");
+                    System.exit(0);
+                }
             }
         
         int goal = 0;
-        float bmi = weight / ((height/100) * (height/100));
+        float heightInMeters = height / 100;
+        float bmi = weight / (heightInMeters * heightInMeters);
         System.out.println("==========================================================");
-        System.out.println("Your BMI as of now is " + bmi + ">>>>>>>");
+        System.out.printf("Your BMI as of now is %.1f\n", bmi);
             if(bmi < 18.5){
                 System.out.println("Given you're underweight, we will tailor a routine for you that focuses on muscle mass gain\n");
                 goal = 2;
             }
-
             else {
-                System.out.println("Where do you want to workout from?  \n1. Get Shredded \n2. Gain Muscle Mass \n3. Lose Weight\nInput: ");
+                System.out.println("What is current goal?  \n1. Get Shredded \n2. Gain Muscle Mass \n3. Lose Weight\nInput: ");
                 goal = sc.nextInt();
                     while (goal < 1 || goal > 3) {
                         sc.nextLine(); 
@@ -145,7 +189,7 @@ public class FF {
             }
 
         System.out.println("==========================================================");
-        System.out.println("What is your Fitness Level? \n1. Beginner  \n2. With Some Experience \n3. Experienced Lifter \nInput: ");
+        System.out.println("What is your Fitness Level? \n1. Beginner \n2. With Some Experience \n3. Experienced Lifter \nInput: ");
         int exp = sc.nextInt();
             while (exp < 1 || exp > 3) {
                 sc.nextLine(); 
@@ -158,7 +202,7 @@ public class FF {
             }
 
         System.out.println("==========================================================");
-        System.out.println("Are you Capable of Following a strict Meal Plan? \n1. Yes \n2. No\nInput: ");
+        System.out.println("Would you like a customized mealplan for you? \n1. Yes \n2. No\nInput: ");
         int mealplan = sc.nextInt();
             while (mealplan < 1 || mealplan > 2) {
                 sc.nextLine(); 
@@ -169,12 +213,7 @@ public class FF {
                 }
                 mealplan = sc.nextInt();
             }
-
-        
-        
-        
         System.out.println("==========================================================");
-        sc.close();
 
         
         switch(goal)
@@ -427,7 +466,7 @@ public class FF {
                         switch (mealplan)
                         {
                         case 1:
-                            System.out.println("Experienced Home Workout (1+ Years Experience! Whole Day Workouts)\nDay 1 Shoulders\n1. Pike Push Ups\n2. HandStand Push Ups (Wall Assisted)\n3. Dive Shoulder Push Ups\n4. Diamond Push Ups\n5. Shoulder Taps\nDay 2 Chest\n1. Normal Push Ups\n2. Wide Push Ups\n3. Diamond Push Ups\n4. Chest Dips\n5. Decline Push Ups\n3. Active Rest (Cardio and Rest)\nDay 4 Back\n1. Supermans\n2. Body Weight Rows\n3. Pull Ups\n4. Muscle Ups\n5. Hollow Hold\nDay 5 Core\n1. Plank\n2. Bicycle Crunches\n3. Russian Twists\n4. Leg Raises\n5. Hollow Hold\nDay 6 Upper Body\n1. Normal Push Ups\n2. Diamond Push Ups\n3. Dips\n4. Chin Ups\n5. Close Grip Chin Ups\nDay 7 Legs\n1. Squats\n2. Lunges\n3. Bulgarian Split Squats (weighted or body weight)\n4. Calf Raises\n5. Wall Sits\n6. Dragon Squats\nNo Meal Plan");
+                            System.out.println("Experienced Home Workout (1+ Years Experience! Whole Day Workouts)\nDay 1 Shoulders\n1. Pike Push Ups\n2. HandStand Push Ups (Wall Assisted)\n3. Dive Shoulder Push Ups\n4. Diamond Push Ups\n5. Shoulder Taps\nDay 2 Chest\n1. Normal Push Ups\n2. Wide Push Ups\n3. Diamond Push Ups\n4. Chest Dips\n5. Decline Push Ups\n3. Active Rest (Cardio and Rest)\nDay 4 Back\n1. Supermans\n2. Body Weight Rows\n3. Pull Ups\n4. Muscle Ups\n5. Hollow Hold\nDay 5 Core\n1. Plank\n2. Bicycle Crunches\n3. Russian Twists\n4. Leg Raises\n5. Hollow Hold\nDay 6 Upper Body\n1. Normal Push Ups\n2. Diamond Push Ups\n3. Dips\n4. Chin Ups\n5. Close Grip Chin Ups\nDay 7 Legs\n1. Squats\n2. Lunges\n3. Bulgarian Split Squats (weighted or body weight)\n4. Calf Raises\n5. Wall Sits\n6. Dragon Squats\nMeal 1. Oatmeal\nIngreadients\n1. 1 Pack of Oatmeal\n2. 1 Banana Sliced\n3. 1/2 Cup of Blue Berries\nMeal 2. Chicken Adobo\nIngredients\n1. 1lb Chicken Thighs\n2. 1/2 Cupy Soy Sauce\n3. 1/4 Cup Vinegar\n4. Cloves Garlic\n5. 2 Bay Leaves\n6. 1 Tsp Peppercorns\nMeal 3. Ginisang Munggo\nIngredients\n1. 1 Cup Mung Beans\n2. 1/2lb Pork Belly\n3. 4 Cloves Garlic\n4. 1 Onion\n5. 2 Tomatoes\n6. Salt And Pepper");
                             break;
                         case 2: 
                             System.out.println("Experienced Home Workout (1+ Years Experience! Whole Day Workouts)\nDay 1 Shoulders\n1. Pike Push Ups\n2. HandStand Push Ups (Wall Assisted)\n3. Dive Shoulder Push Ups\n4. Diamond Push Ups\n5. Shoulder Taps\nDay 2 Chest\n1. Normal Push Ups\n2. Wide Push Ups\n3. Diamond Push Ups\n4. Chest Dips\n5. Decline Push Ups\n3. Active Rest (Cardio and Rest)\nDay 4 Back\n1. Supermans\n2. Body Weight Rows\n3. Pull Ups\n4. Muscle Ups\n5. Hollow Hold\nDay 5 Core\n1. Plank\n2. Bicycle Crunches\n3. Russian Twists\n4. Leg Raises\n5. Hollow Hold\nDay 6 Upper Body\n1. Normal Push Ups\n2. Diamond Push Ups\n3. Dips\n4. Chin Ups\n5. Close Grip Chin Ups\nDay 7 Legs\n1. Squats\n2. Lunges\n3. Bulgarian Split Squats (weighted or body weight)\n4. Calf Raises\n5. Wall Sits\n6. Dragon Squats\nNo Meal Plan");
@@ -961,7 +1000,76 @@ public class FF {
             }
             break;
         }
+        System.out.println("==========================================================");
+        System.out.println("Have you finished the workout? \n1. Yes \n2. No \nInput: ");
+        int finished = sc.nextInt();
+        while (finished < 1 || finished > 2) {
+            sc.nextLine(); 
+            System.out.println("Invalid Input, try again: ");
+            while (!sc.hasNextInt()) {
+                sc.nextLine(); 
+                System.out.println("Invalid Input, try again: ");
+            }
+            finished = sc.nextInt();
+        }
 
-    System.out.println("\n=====================================================================================================\n");
+        if (finished == 1) {
+            System.out.println("==========================================================");
+            System.out.println("Surrender to Your Gains Fitness");
+            System.out.println("==========================================================");
+            System.out.println("Congratulations on completing your workout!");
+            System.out.println("This certificate is awarded to:");
+            System.out.println(name);   
+            System.out.println("For successfully completing the workout plan.");
+            System.out.println("==========================================================");
+        } else {
+            System.out.println("Keep pushing! You can do it!");
+        }
+
+        // Payment section
+        System.out.println("==========================================================");
+        System.out.println("Do you want to proceed with the payment? \n1. Yes \n2. No \nInput: ");
+        int payNow = sc.nextInt();
+        while (payNow < 1 || payNow > 2) {
+            sc.nextLine(); 
+            System.out.println("Invalid Input, try again: ");
+            while (!sc.hasNextInt()) {
+                sc.nextLine(); 
+                System.out.println("Invalid Input, try again: ");
+            }
+            payNow = sc.nextInt();
+        }
+
+        if (payNow == 1) {
+            System.out.println("Do you have a discount code (for students or from sponsorships)? \n1. Yes \n2. No \nInput: ");
+            int discount = sc.nextInt();
+            while (discount < 1 || discount > 2) {
+                sc.nextLine(); 
+                System.out.println("Invalid Input, try again: ");
+                while (!sc.hasNextInt()) {
+                    sc.nextLine(); 
+                    System.out.println("Invalid Input, try again: ");
+                }
+                discount = sc.nextInt();
+            }
+
+            if (discount == 1) {
+                System.out.println("Please enter your discount code: ");
+                sc.next();
+                System.out.println("Confirmed");
+                double discountedPrice = 500 * 0.8;
+                System.out.printf("You are eligible for a 20%% discount. You will be charged %.2f pesos.\n", discountedPrice);
+                System.out.println("You have been charged " + discountedPrice + " pesos.");
+            } else {
+                System.out.println("You will be charged 500 pesos for future usage of Fitiency!");
+                System.out.println("You have been charged 500 pesos.");
+            }
+        } else {
+            System.out.println("==========================================================");
+            System.out.println("We will ask you again if you want to continue with the payment! Until then enjoy your");
+            System.out.println("==========================================================");
+        }
+
+        sc.close(); 
     }
 }
