@@ -1121,14 +1121,14 @@ public class FF {
         }
 
         System.out.println("==========================================================");
-        int newWorkout = 0;
         System.out.println("Would you like to do another set of workout? \n1. Yes \n2. No \nInput: ");
+        int newWorkout = sc.nextInt();
         while (newWorkout < 1 || newWorkout > 2) {
             sc.nextLine(); 
             System.out.println("Invalid Input, try again: ");
             while (!sc.hasNextInt()) {
-            sc.nextLine(); 
-            System.out.println("Invalid Input, try again: ");
+                sc.nextLine(); 
+                System.out.println("Invalid Input, try again: ");
             }
             newWorkout = sc.nextInt();
         }
