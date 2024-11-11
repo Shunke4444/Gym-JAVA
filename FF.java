@@ -133,7 +133,7 @@ public class FF {
                     if (injury.equalsIgnoreCase("asthma")) {
                         System.out.println("If you have asthma, it is important to consult your doctor before starting any exercise routine.");
                     } else {
-                        System.out.println("Please consult your doctor first.");
+                        System.out.println("Please consult your doctor first before enrolling in our application!");
                     }
                     System.out.println("==========================================================");
                     System.exit(0);
@@ -162,7 +162,7 @@ public class FF {
                         goal = sc.nextInt();
                     }
             }
-
+      
         System.out.println("==========================================================");
         System.out.println("Where do you want to workout from? \n1. Gym \n2. Home\nInput: ");
         int location = sc.nextInt();
@@ -217,7 +217,6 @@ public class FF {
             }
         System.out.println("==========================================================");
 
-        
         switch(goal)
         {
         case 1://Shredded
@@ -266,7 +265,7 @@ public class FF {
                         break;
                     }
                     break;
-
+        
                 case 2: //3-5 Days
                     switch(exp)
                     {
@@ -293,7 +292,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -323,7 +322,7 @@ public class FF {
                             break;          
                         }    
                         break;
-
+        
                     case 2: 
                         switch (mealplan)
                         {
@@ -335,7 +334,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -351,7 +350,7 @@ public class FF {
                     break;                                
                 }
                 break;
-
+        
             case 2: //Home
                 switch (wrktime)
                 {
@@ -395,7 +394,7 @@ public class FF {
                         break;
                     }
                     break;
-
+        
                 case 2: //3-5 days
                     switch (exp)
                     {
@@ -410,7 +409,7 @@ public class FF {
                             break;    
                         }
                         break;
-
+        
                     case 2: 
                         switch (mealplan)
                         {
@@ -422,7 +421,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -436,7 +435,7 @@ public class FF {
                         break;
                     }
                     break;
-
+        
                 case 3: // 6-7 days
                     switch (exp)
                     {
@@ -451,7 +450,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 2: 
                         switch (mealplan)
                         {
@@ -463,7 +462,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3: 
                         switch (mealplan)
                         {
@@ -502,7 +501,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 2:
                         switch (mealplan)
                         {
@@ -514,7 +513,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -528,7 +527,7 @@ public class FF {
                         break;
                     }
                     break;
-
+        
                 case 2: //3-5 days
                     switch (exp)
                     {
@@ -543,7 +542,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 2:
                         switch (mealplan)
                         {
@@ -555,7 +554,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -583,7 +582,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 2:
                         switch (mealplan)
                         {
@@ -595,7 +594,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -629,7 +628,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 2:
                         switch (mealplan)
                         {
@@ -641,7 +640,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -655,7 +654,7 @@ public class FF {
                         break;
                     }
                     break;
-
+        
                 case 2: //3-5 days
                     switch (exp)
                     {
@@ -670,7 +669,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 2:
                         switch (mealplan)
                         {
@@ -682,7 +681,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -696,7 +695,7 @@ public class FF {
                         break;
                     }
                     break;
-
+        
                 case 3: //6-7 days
                     switch (exp)
                     {
@@ -711,7 +710,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 2:
                         switch (mealplan)
                         {
@@ -723,7 +722,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -762,7 +761,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 2:
                         switch (mealplan)
                         {
@@ -774,7 +773,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -803,7 +802,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 2:
                         switch (mealplan)
                         {
@@ -815,7 +814,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -829,7 +828,7 @@ public class FF {
                         break;
                     }
                     break;
-
+        
                 case 3: //6-7 Days
                     switch (exp)
                     {
@@ -856,7 +855,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -872,7 +871,7 @@ public class FF {
                     break;
                 }
                 break;
-
+        
             case 2: //Home
                 switch (wrktime)
                 {
@@ -890,7 +889,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 2:
                         switch (mealplan)
                         {
@@ -902,7 +901,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -916,7 +915,7 @@ public class FF {
                         break;
                     }
                     break;
-
+        
                 case 2: //3-5 Days
                     switch (exp)
                     {
@@ -931,7 +930,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                         case 2:
                         switch (mealplan)
                         {
@@ -943,7 +942,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -983,7 +982,7 @@ public class FF {
                             break;
                         }
                         break;
-
+        
                     case 3:
                         switch (mealplan)
                         {
@@ -1001,8 +1000,8 @@ public class FF {
                 break;
             }
             break;
-        }
-        // Payment section
+        }        
+        
         System.out.println("==========================================================");
         System.out.println("To further use FITEFFICIENCY, we will need you to pay a subscription are you still willing to grow with us? \n1. Yes \n2. No \nInput: ");
         int subscription = sc.nextInt();
@@ -1118,8 +1117,105 @@ public class FF {
             System.out.println("==========================================================");
         } else {
             System.out.println("Keep pushing! You can do it!");
+            sc.close();
         }
 
-        sc.close(); 
+        System.out.println("==========================================================");
+        int newWorkout = 0;
+        System.out.println("Would you like to do another set of workout? \n1. Yes \n2. No \nInput: ");
+        while (newWorkout < 1 || newWorkout > 2) {
+            sc.nextLine(); 
+            System.out.println("Invalid Input, try again: ");
+            while (!sc.hasNextInt()) {
+            sc.nextLine(); 
+            System.out.println("Invalid Input, try again: ");
+            }
+            newWorkout = sc.nextInt();
+        }
+        
+        if (newWorkout == 1) {
+            System.out.println("Do you want to make the workout harder or easier or keep its level? \n1. Harder \n2. Easier \n3. Keep Level \nInput:");
+            int difficulty = sc.nextInt();
+
+            switch (difficulty) {
+                
+                case 1:
+                    System.out.println("You have chosen to make the workout harder. Let's push your limits with this new workout!");
+                    System.out.println("Would you like to create a meal plan? \n1. Yes \n2. No \nInput: ");
+                    int createMealPlan = sc.nextInt();
+
+                    while (createMealPlan < 1 || createMealPlan > 2) {
+                        sc.nextLine();
+                        System.out.println("Invalid Input, try again: ");
+                        while (!sc.hasNextInt()) {
+                            sc.nextLine();
+                            System.out.println("Invalid Input, try again: ");
+                        }
+                        createMealPlan = sc.nextInt();
+                    }
+
+                    if (createMealPlan == 1) {
+                        System.out.println("Here is your workout with a mealplan!");
+                        System.out.println("(3-4 Sets - 8-12 Repititions!)\nDay 1. Upper Body\n1. Push Ups\n2. Chest Dips\n3. Pull Ups/Lat Pull Downs\n4. Chin Ups\n5. Plank\nDay 2. Lower Body\n1. Barbell Squats\n2. Jumping Squats\n3. Wall Sit\n4. Lunges\n5. Leg Extensions\nDay 3. Cardio\nDay 4. Rest Day\nDay 5. Upper Body\n1. Lat Pull Downs\n2. Single Hand Dumbbell Rows\n3. Single Hand Cable Pull Overs\n4. Bicep Curls\nDay 5. Tricep Push Downns\nDay 6. Lower Body\n1. Squats\n2. Leg curls\n3. Leg Press\n4. Leg Extension\n5. Calf Raises\nDay 7. Cardio\nMeal 1. Scrambled Eggs with Avocado Toast\nIngredients\n1. 2 Eggs\n2. 1/2 Avocado\n3. 2 Slices Whole-Grain Bread\nMeal 2 Grilled Chicken Salad\nIngredients\n1. 4 oz Grilled Chicken Breast\n2. Mixed Greens\n3. 1/2 Cucumber\n4. 1/2 Bell Peppers\n5. Tomatoes\nMeal 3 Baked Salmon\n1. 4 oz Baked salmon\n2. 1/2 Cup Brown Rice\n3. Chosen Vegetables");
+                    } else {
+                        System.out.println("(3-4 Sets - 8-12 Repititions!)\nDay 1. Upper Body\n1. Push Ups\n2. Chest Dips\n3. Pull Ups/Lat Pull Downs\n4. Chin Ups\n5. Plank\nDay 2. Lower Body\n1. Barbell Squats\n2. Jumping Squats\n3. Wall Sit\n4. Lunges\n5. Leg Extensions\nDay 3. Cardio\nDay 4. Rest Day\nDay 5. Upper Body\n1. Lat Pull Downs\n2. Single Hand Dumbbell Rows\n3. Single Hand Cable Pull Overs\n4. Bicep Curls\nDay 5. Tricep Push Downns\nDay 6. Lower Body\n1. Squats\n2. Leg curls\n3. Leg Press\n4. Leg Extension\n5. Calf Raises\nDay 7. Cardio\nNo Meal Plan");
+                    }
+                    break;
+
+                case 2:
+                    System.out.println("You have chosen to make the workout easier. Listen to your body and take it easy.");
+                    System.out.println("Would you like to create a meal plan with that workout? \n1. Yes \n2. No \nInput: ");
+
+                    int createMealPlan2 = sc.nextInt();
+
+                    while (createMealPlan2 < 1 || createMealPlan2 > 2) {
+                        sc.nextLine();
+                        System.out.println("Invalid Input, try again: ");
+                        while (!sc.hasNextInt()) {
+                            sc.nextLine();
+                            System.out.println("Invalid Input, try again: ");
+                        }
+                        createMealPlan2 = sc.nextInt();
+                    }
+
+                    if (createMealPlan2 == 1) {
+                        System.out.println("(2-3 Sets - 8-12 Repititions!)\nDay 1. Upper Body\n1. Bench Press\n2. Shoulder Press\n3. Planks\nDay 2. Cardio and Core\n1. 45 Minute Cardio (Running/Cycling/Swimming)\n2. Russian Twists\n3. Jumping Jacks\nDay 3. Lower Body\n1. Squats\n2. Lunges\n3. Calf Raises\nDay 4. Rest\nDay 5. Cardio\nMeal Plan\nMeal 1. Greek Yogurt with Berries and Nuts\nIngredients\n1. 1 Cup Greek Yogurt\n2. 1/2 Cup Mixed Berries\n3. 1tbsp Chopped walnuts\nMeal 2. Turkey and Veggie Stir Fry\nIngredients\n1. 4 oz Lean Ground Turkey\2. Mixed Sir Fry veggies (bell peppers, broccoli, peas\n3. 1/2 Brown rice\nMeal 3. Salmon and Broccoli\nIngredients\n1. 5 oz Salmon fillet\n2. Seasoned Herbs\n3. Steamed Broccoli\n4. 1/2 cup Brown Rice");
+
+                    } else {
+                        System.out.println("(2-3 Sets - 8-12 Repititions!)\nDay 1. Upper Body\n1. Bench Press\n2. Shoulder Press\n3. Planks\nDay 2. Cardio and Core\n1. 45 Minute Cardio (Running/Cycling/Swimming)\n2. Russian Twists\n3. Jumping Jacks\nDay 3. Lower Body\n1. Squats\n2. Lunges\n3. Calf Raises\nDay 4. Rest\nDay 5. Cardio\nNo Meal Plan");
+                    }
+                    break;
+
+                case 3:
+                    System.out.println("You have chosen to keep the workout level the same. Consistency is key!");
+                    System.out.println("Would you like to create a meal plan with that workout? \n1. Yes \n2. No \nInput: ");
+                    int createMealPlan3 = sc.nextInt();
+                    while (createMealPlan3 < 1 || createMealPlan3 > 2) {
+                        sc.nextLine();
+                        System.out.println("Invalid Input, try again: ");
+                        while (!sc.hasNextInt()) {
+                            sc.nextLine();
+                            System.out.println("Invalid Input, try again: ");
+                        }
+                        createMealPlan3 = sc.nextInt();
+                    }
+
+                    if (createMealPlan3 == 1) {
+                        System.out.println("(2-3 Sets - 8-12 Repititions!)\nDay 1. Full Body\n1. Push Ups\n2. Planks\n3. Push Ups\nDay 2. Cardio\nDay 3 Rest\nDay 4. Full Body\n1. Body Weight Lunges\n2. Assited Pull Ups\n3. Plank\nDay 5. Cardio\nDay 6.Rest\nDay 7. Legs\n1. Lunges\n2. Squats\n3. Jumping Squats\nMeal Plan\nMeal 1. Scrambled Eggs with Avocado Toast\nIngredients\n1. 2 Eggs\n2. 1/2 Avocado\n3. 2 Slices Whole-Grain Bread\nMeal 2 Grilled Chicken Salad\nIngredients\n1. 4 oz Grilled Chicken Breast\n2. Mixed Greens\n3. 1/2 Cucumber\n4. 1/2 Bell Peppers\n5. Tomatoes\nMeal 3 Baked Salmon\n1. 4 oz Baked salmon\n2. 1/2 Cup Brown Rice\n3. Chosen Vegetabless");
+
+                    } else {
+                        System.out.println("(2-3 Sets - 8-12 Repititions!)\nDay 1. Full Body\n1. Push Ups\n2. Planks\n3. Push Ups\nDay 2. Cardio\nDay 3 Rest\nDay 4. Full Body\n1. Body Weight Lunges\n2. Assited Pull Ups\n3. Plank\nDay 5. Cardio\nDay 6.Rest\nDay 7. Legs\n1. Lunges\n2. Squats\n3. Jumping Squats\nNo Meal Plan");
+                    }
+                    break;
+                default:
+                    System.out.println("Invalid Input, please choose 1, 2, or 3.");
+                    break;
+            }
+            System.out.println("==========================================================");
+            System.out.println("Please remember to stay hydrated and take breaks when needed.");
+        } else {
+            System.out.println("Good job! Remember to rest and recover.");
+        }
+        
     }
 }
