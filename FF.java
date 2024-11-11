@@ -1216,6 +1216,8 @@ public class FF {
         } else {
             System.out.println("Good job! Remember to rest and recover.");
         }
-        
+        if (newWorkout == 2) {
+            System.out.println("Get some rest in for now and lets work out in another date!");
+        }
     }
 }
