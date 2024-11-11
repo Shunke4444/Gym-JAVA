@@ -26,16 +26,18 @@ public class FF {
         String name = sc.nextLine();
 
         System.out.println("\nAge:");
-        int age = sc.nextInt();
-            while (age < 1) {
-                sc.nextLine(); 
-                System.out.println("Invalid Age, try again: ");
-                while (!sc.hasNextInt()) {
-                    sc.nextLine(); 
-                    System.out.println("Invalid Age, try again: ");
-                }
-                age = sc.nextInt();
+        int age = -1;
+        while (age < 1) {
+            System.out.println("Please enter a valid age: ");
+            while (!sc.hasNextInt()) {
+                System.out.println("Invalid input. Please enter a number: ");
+                sc.next(); 
             }
+            age = sc.nextInt();
+            if (age < 1) {
+                System.out.println("Invalid Age, try again: ");
+            }
+        }
 
         System.out.println("\nWeight in Kilograms: ");
         float weight = sc.nextInt();
@@ -87,7 +89,7 @@ public class FF {
             }
             
             if (health == 1){
-                sc.nextLine(); // Consume the newline character
+                sc.nextLine(); 
                 System.out.println("==========================================================");
                 System.out.println("Please specify your injury or health condition: ");
                 String injury = sc.nextLine();
@@ -1000,6 +1002,98 @@ public class FF {
             }
             break;
         }
+        // Payment section
+        System.out.println("==========================================================");
+        System.out.println("To further use FITEFFICIENCY, we will need you to pay a subscription are you still willing to grow with us? \n1. Yes \n2. No \nInput: ");
+        int subscription = sc.nextInt();
+        while (subscription < 1 || subscription > 2) {
+            sc.nextLine(); 
+            System.out.println("Invalid Input, try again: ");
+            while (!sc.hasNextInt()) {
+            sc.nextLine(); 
+            System.out.println("Invalid Input, try again: ");
+            }
+            subscription = sc.nextInt();
+        }
+        if (subscription == 2) {
+            System.out.println("==========================================================");
+            System.out.println("Reminder: The app will need a subscription for further use. Enjoy your trial period!");
+            System.out.println("==========================================================");
+            sc.close();
+            System.exit(0);
+        }
+        
+        System.out.println("Do you want to proceed with the payment? \n1. Yes \n2. No \nInput: ");
+        int payNow = sc.nextInt();
+        while (payNow < 1 || payNow > 2) {
+            sc.nextLine(); 
+            System.out.println("Invalid Input, try again: ");
+            while (!sc.hasNextInt()) {
+            sc.nextLine(); 
+            System.out.println("Invalid Input, try again: ");
+            }
+            payNow = sc.nextInt();
+        }
+        if (payNow == 2) {
+            System.out.println("==========================================================");
+            System.out.println("Reminder: The app will need a subscription for further use. Enjoy your trial period!");
+            System.out.println("==========================================================");
+            sc.close();
+            System.exit(0);
+        }
+
+        System.out.println("Choose your subscription plan: \n1. 1 Month (500 pesos) \n2. 3 Months (10% discount) \n3. 6 Months (20% discount) \n4. 1 Year (30% discount) \nInput: ");
+        int plan = sc.nextInt();
+        while (plan < 1 || plan > 4) {
+            sc.nextLine();
+            System.out.println("Invalid Input, try again: ");
+            while (!sc.hasNextInt()) {
+                sc.nextLine();
+                System.out.println("Invalid Input, try again: ");
+            }
+            plan = sc.nextInt();
+        }
+
+        double price = 0;
+        switch (plan) {
+            case 1 -> price = 500;
+            case 2 -> price = 500 * 3 * 0.9;
+            case 3 -> price = 500 * 6 * 0.8;
+            case 4 -> price = 500 * 12 * 0.7;
+        }
+        
+        System.out.println("Do you have a discount code (for students or from sponsorships)? \n1. Yes \n2. No \nInput: ");
+        int discount = sc.nextInt();
+        while (discount < 1 || discount > 2) {
+            sc.nextLine();
+            System.out.println("Invalid Input, try again: ");
+            while (!sc.hasNextInt()) {
+                sc.nextLine();
+                System.out.println("Invalid Input, try again: ");
+            }
+            discount = sc.nextInt();
+        }
+        
+        if (discount == 2) {
+            System.out.println("No discount code applied.");
+            System.out.printf("You have chosen plan %d. You will be charged %.2f pesos for future usage of Fitiency!\n", plan, price);
+        } else if (discount == 1) {
+            System.out.println("Please enter your discount code: ");
+            sc.next();
+            System.out.println("Confirmed");
+            price *= 0.8;
+            System.out.printf("You are eligible for a 20%% discount. You will be charged %.2f pesos.\n", price);
+        }
+        
+        if (payNow == 1) {
+            System.out.println("You will be charged " + price + " pesos for future usage of Fitiency!");
+        } else {
+            System.out.println("==========================================================");
+            System.out.println("We will ask you again if you want to continue with the payment! Until then, enjoy your trial period!");
+            System.out.println("==========================================================");
+        }
+        
+
         System.out.println("==========================================================");
         System.out.println("Have you finished the workout? \n1. Yes \n2. No \nInput: ");
         int finished = sc.nextInt();
@@ -1007,8 +1101,8 @@ public class FF {
             sc.nextLine(); 
             System.out.println("Invalid Input, try again: ");
             while (!sc.hasNextInt()) {
-                sc.nextLine(); 
-                System.out.println("Invalid Input, try again: ");
+            sc.nextLine(); 
+            System.out.println("Invalid Input, try again: ");
             }
             finished = sc.nextInt();
         }
@@ -1024,50 +1118,6 @@ public class FF {
             System.out.println("==========================================================");
         } else {
             System.out.println("Keep pushing! You can do it!");
-        }
-
-        // Payment section
-        System.out.println("==========================================================");
-        System.out.println("Do you want to proceed with the payment? \n1. Yes \n2. No \nInput: ");
-        int payNow = sc.nextInt();
-        while (payNow < 1 || payNow > 2) {
-            sc.nextLine(); 
-            System.out.println("Invalid Input, try again: ");
-            while (!sc.hasNextInt()) {
-                sc.nextLine(); 
-                System.out.println("Invalid Input, try again: ");
-            }
-            payNow = sc.nextInt();
-        }
-
-        if (payNow == 1) {
-            System.out.println("Do you have a discount code (for students or from sponsorships)? \n1. Yes \n2. No \nInput: ");
-            int discount = sc.nextInt();
-            while (discount < 1 || discount > 2) {
-                sc.nextLine(); 
-                System.out.println("Invalid Input, try again: ");
-                while (!sc.hasNextInt()) {
-                    sc.nextLine(); 
-                    System.out.println("Invalid Input, try again: ");
-                }
-                discount = sc.nextInt();
-            }
-
-            if (discount == 1) {
-                System.out.println("Please enter your discount code: ");
-                sc.next();
-                System.out.println("Confirmed");
-                double discountedPrice = 500 * 0.8;
-                System.out.printf("You are eligible for a 20%% discount. You will be charged %.2f pesos.\n", discountedPrice);
-                System.out.println("You have been charged " + discountedPrice + " pesos.");
-            } else {
-                System.out.println("You will be charged 500 pesos for future usage of Fitiency!");
-                System.out.println("You have been charged 500 pesos.");
-            }
-        } else {
-            System.out.println("==========================================================");
-            System.out.println("We will ask you again if you want to continue with the payment! Until then enjoy your");
-            System.out.println("==========================================================");
         }
 
         sc.close(); 
